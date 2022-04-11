@@ -11,9 +11,10 @@ To know more about the challenge, you can [read here](https://github.com/timfpar
  
 ### How I approached this problem
 - As part of my last role, I have worked on adding REST APIs. However I have not created Web API project from scratch. I took this challenge to learn how to set up one. 
- - I created a Microsoft ASP.Net Web API and which I hosted locally. Creating a templated project allowed me start with a sample working Web API which was great.
- - The Web API which I envisaged would take in latitude/longitude as inputs and return JSON of nearest 5 food trucks.
-    POST https://localhost:7084/FoodTruck/GetFoodTrucks with request schema as below:
+  - I created a Microsoft ASP.Net Web API and which I hosted locally. Creating a templated project allowed me start with a sample working Web API which was great.   
+  - The Web API which I envisaged would take in latitude/longitude as inputs and return JSON of nearest 5 food trucks.
+  - 
+    https://localhost:7084/FoodTruck/GetFoodTrucks POST API with request schema as below:
     ```json
     {
       "Latitude": 0,
@@ -27,7 +28,10 @@ To know more about the challenge, you can [read here](https://github.com/timfpar
     - At the end of iteration, dequeue the nearest food trucks and return
     
 - Now for the test run outputs
+
     **Input**
+    
+    
     POST https://localhost:7084/FoodTruck/GetFoodTrucks
     ```json
     {

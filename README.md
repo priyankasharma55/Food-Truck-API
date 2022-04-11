@@ -15,13 +15,16 @@ The Web API I created for this challenge
 POST https://localhost:7084/FoodTruck/GetFoodTrucks
 
 which has request schema as below:
+
+```json
 {
   "latitude": 0,
   "longitude": 0
 }
-
+```
 and returns Json output
 
+```json
 {
   {
     " LocationId": 1571753,
@@ -129,7 +132,7 @@ and returns Json output
       }
     }
 }
-
+```
 
   
 **Why did I choose this approach**

@@ -151,5 +151,4 @@ To know more about the challenge, you can [read here](https://github.com/timfpar
     }
     ```
 ### What would I would have done if I had more time
-- I would have liked to create a front end which would consume this web api to help visualise the food trucks near by, as the target coordinate moved.
-- 
+I would have liked to create a front end which would consume this web api to help visualise the food trucks near by, as the target coordinate moved. 

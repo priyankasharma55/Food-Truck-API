@@ -3,7 +3,7 @@
     public class Nearby
     {
         private List<FoodTruck> FoodTrucks;
-        private readonly int N = 5;
+        private readonly int k = 5;
         private static readonly string CSV_PATH = "<path_to_input_csv>";
 
         public Nearby()
@@ -32,12 +32,12 @@
             {
                 var distance = DistanceTo(coordinate, foodTruck.Coordinate);
                 maxHeap.Enqueue(foodTruck, -distance);
-                if (maxHeap.Count > N)                
+                if (maxHeap.Count > k)                
                     maxHeap.Dequeue();
             }
 
             //Now dequeue n minimum ones
-            for(var i = 0; i < N && maxHeap.Count > 0; i++)
+            for(var i = 0; i < k && maxHeap.Count > 0; i++)
                 resultFoodTrucks.Add( maxHeap.Dequeue() );
 
             resultFoodTrucks.Reverse();

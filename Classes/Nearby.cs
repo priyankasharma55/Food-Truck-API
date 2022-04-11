@@ -11,7 +11,7 @@
             FoodTrucks = ReadCsv();
         }
         
-        private IEnumerable<FoodTruck>? ReadCsv()
+        private List<FoodTruck>? ReadCsv()
         {
             var Lines = File.ReadAllLines(CSV_PATH)
                                            .Skip(1)
@@ -22,7 +22,7 @@
                 return Lines.ToList();
         }
 
-        public IEnumerable<FoodTruck> GetNearestFoodTrucks(double longtitude, double latitude)
+        public List<FoodTruck> GetNearestFoodTrucks(double longtitude, double latitude)
         {
             var resultFoodTrucks = new List<FoodTruck>();
             
@@ -40,6 +40,7 @@
             for(var i = 0; i < N && maxHeap.Count > 0; i++)
                 resultFoodTrucks.Add( maxHeap.Dequeue() );
 
+            resultFoodTrucks.Reverse();
             return resultFoodTrucks;
         }
 

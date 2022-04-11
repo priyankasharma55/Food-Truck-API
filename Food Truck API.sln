@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Food Truck API", "Food Truck API.csproj", "{642F8656-3B7C-4F0F-9977-6447F27C59ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Food Truck API", "Food Truck API.csproj", "{642F8656-3B7C-4F0F-9977-6447F27C59ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Food Truck API Tests", "..\Food Truck API Tests\Food Truck API Tests.csproj", "{84CBC356-62AB-43E1-BBE7-3F575B00AF4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{642F8656-3B7C-4F0F-9977-6447F27C59ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{642F8656-3B7C-4F0F-9977-6447F27C59ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{642F8656-3B7C-4F0F-9977-6447F27C59ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84CBC356-62AB-43E1-BBE7-3F575B00AF4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84CBC356-62AB-43E1-BBE7-3F575B00AF4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84CBC356-62AB-43E1-BBE7-3F575B00AF4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84CBC356-62AB-43E1-BBE7-3F575B00AF4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

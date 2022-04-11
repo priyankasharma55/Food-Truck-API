@@ -21,11 +21,12 @@ To know more about the challenge, you can [read here](https://github.com/timfpar
       "Longitude": 0
     }
     ```
-- Coming to the algo to get nearest 5 food trucks for given longitude/latitude, here is how approached the problem
+- Coming to the algo to get nearest 5 food trucks for given longitude/latitude, here is how I approached the problem
     - Firstly parse the csv and for each line instantiate an object depicting a food truck with properties like name, longitude, latitude, items served, etc    -
     - Use Priority Queue of size k(=5) as a max heap to store the closest k food trucks. Negative of distance between target coordinate and food truck is the priority
     - Now iterate over each food truck and add it priority queue. When the priority queue count becomes > k, then dequeue the farthest truck from the queue
     - At the end of iteration, dequeue the nearest food trucks and return
+    - I added a simple XUnit Test to test the sanity of this algo function
     
 - Now for the test run outputs
 
@@ -149,6 +150,6 @@ To know more about the challenge, you can [read here](https://github.com/timfpar
         }
     }
     ```
-
 ### What would I would have done if I had more time
+- I would have liked to create a front end which would consume this web api to help visualise the food trucks near by, as the target coordinate moved.
 - 

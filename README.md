@@ -28,7 +28,7 @@ To know more about the challenge, you can [read here](https://github.com/timfpar
     - At the end of iteration, dequeue the nearest food trucks and return
     - I added a simple XUnit Test to test the sanity of this algo function
     - Complexity
-        - Time: The algo iterates over all N food trucks and inserts them in the max heap of size k. Insertion in a max heap of size k is O(logk), so the algo runs with Time Complexity of O(Nlogk). Given, k is constant(=5), it translates to **O(N)** time complexity.
+        - Time: The algo iterates over all N food trucks and inserts them in the max heap of size k. Insertion in a heap of size k is O(logk), so the algo runs with Time Complexity of O(Nlogk). Given k is a constant(=5), it translates to **O(N)** time complexity.
         - Space: Besides the input (size N) and output (size k) that do not count towards space complexity, the algo creates a max heap of size k, so the space complexity is O(k). Given k is a constant(=5), it runs in **constant** space complexity.
     
 - Now for the test run outputs

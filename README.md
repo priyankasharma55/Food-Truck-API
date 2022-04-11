@@ -23,13 +23,13 @@ To know more about the challenge, you can [read here](https://github.com/timfpar
     ```
 - Coming to the algo to get nearest 5 food trucks for given longitude/latitude, here is how I approached the problem
     - Firstly parse the csv and for each line instantiate an object depicting a food truck with properties like name, longitude, latitude, items served, etc    -
-    - Use Priority Queue as a **max heap** to store the closest k food trucks, with the distance between target coordinate and food truck being the priority
+    - Use Priority Queue as a **max heap** to store the closest k(=5) food trucks, with the distance between target coordinate and food truck being the priority
     - Iterate over each food truck and add it to max heap. When the max heap's count becomes > k, then dequeue the farthest truck from the max heap. This is to keep the size of the max heap <= k.
     - At the end of iteration, dequeue the nearest food trucks and return
     - I added a simple XUnit Test to test the sanity of this algo function
     - Complexity
-        - Time: The algo iterate over all N food trucks and inserts them in the max heap of size k. Insertion in a max heap of size k is O(logk), so the algo runs with Time Complexity of O(Nlogk). Given, k is constant(=5), it translates to **O(N)** time complexity.
-        - Space: Given the input (size N) and output (size k) do not count towards space complexity, the algo creates a max heap of size k, so the space complexity is O(k). Given k is a constant(=5), it runs in **constant** space complexity.
+        - Time: The algo iterates over all N food trucks and inserts them in the max heap of size k. Insertion in a max heap of size k is O(logk), so the algo runs with Time Complexity of O(Nlogk). Given, k is constant(=5), it translates to **O(N)** time complexity.
+        - Space: Besides the input (size N) and output (size k) that do not count towards space complexity, the algo creates a max heap of size k, so the space complexity is O(k). Given k is a constant(=5), it runs in **constant** space complexity.
     
 - Now for the test run outputs
 
@@ -47,7 +47,7 @@ To know more about the challenge, you can [read here](https://github.com/timfpar
     ```json
     {
       {
-        " LocationId": 1571753,
+        "LocationId": 1571753,
         "Name": "The Geez Freeze",
         "FacilityType": "Truck",
         "LocationDescription": "18TH ST: DOLORES ST to CHURCH ST (3700 - 3799)",
@@ -154,4 +154,10 @@ To know more about the challenge, you can [read here](https://github.com/timfpar
     }
     ```
 ### What would I would have done if I had more time
-I would have liked to create a front end which would consume this web api to help visualise the food trucks near by, as the target coordinate moved. 
+- I would have liked to create a front end which would consume this web api to help visualise the food trucks near by. 
+- I would love to have a **isValid()** method on the food truck object that looks at its properties ('Dayshours', 'Status' etc) before considering it as a valid input.
+    - For cases where the current time is outside of food truck's 'Dayshours', it is not considered as an input, so never returned even if it is the nearest.
+    - For cases where the food truck is not yet 'Approved', it is not considered as an input even if it is the nearest.
+- I could also support an endpoint to add/update/delete food trucks. It updates our internal cache of the food trucks. This would be helpful:
+    - to add/remove more food trucks on the fly
+    - would support food trucks that are on the move instead of current stationary food trucks

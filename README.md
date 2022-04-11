@@ -161,3 +161,7 @@ To know more about the challenge, you can [read here](https://github.com/timfpar
 - I could also support an endpoint to add/update/delete food trucks. It updates our internal cache of the food trucks. This would be helpful:
     - to add/remove more food trucks on the fly
     - would support food trucks that are on the move instead of current stationary food trucks
+
+### Code structure
+- FoodTruckController.cs is the entry point to the request
+- Nearby.cs has *GetNearestFoodTrucks(longtitude, latitude)* that calculates the desired output

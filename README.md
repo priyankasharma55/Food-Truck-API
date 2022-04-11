@@ -23,10 +23,13 @@ To know more about the challenge, you can [read here](https://github.com/timfpar
     ```
 - Coming to the algo to get nearest 5 food trucks for given longitude/latitude, here is how I approached the problem
     - Firstly parse the csv and for each line instantiate an object depicting a food truck with properties like name, longitude, latitude, items served, etc    -
-    - Use Priority Queue of size k(=5) as a max heap to store the closest k food trucks. Negative of distance between target coordinate and food truck is the priority
-    - Now iterate over each food truck and add it priority queue. When the priority queue count becomes > k, then dequeue the farthest truck from the queue
+    - Use Priority Queue as a **max heap** to store the closest k food trucks, with the distance between target coordinate and food truck being the priority
+    - Iterate over each food truck and add it to max heap. When the max heap's count becomes > k, then dequeue the farthest truck from the max heap. This is to keep the size of the max heap <= k.
     - At the end of iteration, dequeue the nearest food trucks and return
     - I added a simple XUnit Test to test the sanity of this algo function
+    - Complexity
+        - Time: The algo iterate over all N food trucks and inserts them in the max heap of size k. Insertion in a max heap of size k is O(logk), so the algo runs with Time Complexity of O(Nlogk). Given, k is constant(=5), it translates to **O(N)** time complexity.
+        - Space: Given the input (size N) and output (size k) do not count towards space complexity, the algo creates a max heap of size k, so the space complexity is O(k). Given k is a constant(=5), it runs in **constant** space complexity.
     
 - Now for the test run outputs
 

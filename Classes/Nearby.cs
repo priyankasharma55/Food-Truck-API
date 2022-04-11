@@ -2,7 +2,7 @@
 {
     public class Nearby
     {
-        private IEnumerable<FoodTruck>? FoodTrucks;
+        private List<FoodTruck> FoodTrucks;
         private readonly int N = 5;
         private static readonly string CSV_PATH = "<path_to_input_csv>";
 
@@ -11,7 +11,7 @@
             FoodTrucks = ReadCsv();
         }
         
-        private List<FoodTruck>? ReadCsv()
+        private List<FoodTruck> ReadCsv()
         {
             var Lines = File.ReadAllLines(CSV_PATH)
                                            .Skip(1)
